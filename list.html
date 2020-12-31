@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>学四史·看变迁</title>
+    <link rel="stylesheet" href="css/wap-base.css">
+    <link rel="stylesheet" href="css/list.css">
+    <script src="js/flexible.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="column list">
+            <h2>昆山片玉</h2>
+            <!-- <div class="item"> -->
+            <ul class="grid">
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+                <li class="grid">
+                    <a href="">
+                        <i></i>
+                        <label>学四史.看上海生活废弃物管理变迁看上海生活废弃物管理变迁</label>
+                    </a>
+                </li>
+            </ul>
+            <!-- </div> -->
+            <div class="column return" onclick="window.location.href='menu.html'">
+                <img src="images/return.png" alt="">
+                <h4>返回</h4>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        {
+            let data = getUrlParam('name');
+            let title = document.querySelector('h2')
+            console.log(title);
+            switch (data) {
+                case '1':
+                    title.innerHTML = '鉴往知今';
+                    break;
+                case '2':
+                    title.innerHTML = '昆山片玉';
+                    break;
+                case '3':
+                    title.innerHTML = '如日方升';
+                    break;
+                case '4':
+                    title.innerHTML = '笃行致远';
+                    break;
+            }
+
+            function getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+                var params = window.location.search;
+                if (params == null || params.length <= 1) return null;
+                var r = params.substr(1).match(reg); //匹配目标参数
+                if (r != null) return unescape(r[2]);
+                return null; //返回参数值
+            }
+        }
+    </script>
+</body>
+
+</html>

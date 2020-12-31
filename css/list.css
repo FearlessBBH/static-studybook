@@ -1,0 +1,120 @@
+body {
+    height: 100% !important;
+    background-color: #000;
+}
+
+.wrapper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../images/bg_list.jpg) no-repeat top center;
+    background-size: 100% 100%;
+    flex-direction: column !important;
+}
+
+.list>h2 {
+    margin-top: 1.49rem;
+    width: 100%;
+    height: 1.03rem;
+    line-height: 1.03rem;
+    text-align: center;
+    font-size: .64rem;
+    font-weight: bold;
+    color: #160000;
+    letter-spacing: 5px;
+    background: url(../images/bg_title.png) no-repeat center center;
+    background-size: 5.44rem 1.03rem;
+}
+
+
+/* .list .item {
+    margin: 0.45rem 0 0 0.63rem;
+    width: 8.65rem;
+    height: 12rem;
+    overflow: hidden;
+} */
+
+.list ul {
+    margin: 0.45rem 0 0 0.63rem;
+    width: 8.65rem;
+    height: 75.8%;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+.list ul>li {
+    width: 100%;
+    min-height: 1.31rem;
+    /* line-height: 1.55rem; */
+    border-bottom: 0.03rem dashed #160000;
+    align-items: center;
+    justify-content: center;
+}
+
+.list ul>li a {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    width: 100%;
+    height: 100%;
+    color: #160000;
+    line-height: 50%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list ul>li a>i {
+    /* float: left;
+    margin: 0.68rem 0.37rem 0 0.16rem; */
+    width: 0.19rem;
+    height: 0.19rem;
+    background-color: #160000;
+    border-radius: 50%;
+}
+
+.list ul>li a>label {
+    width: 7.9rem;
+    line-height: .5rem;
+    font-size: 0.4rem;
+    font-weight: bold;
+    color: #160000;
+}
+
+.return {
+    position: absolute;
+    top: 1.6rem;
+    left: 1.2rem;
+    width: .7rem;
+    height: .75rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.return>img {
+    width: .51rem;
+    height: .41rem;
+    border: none;
+}
+
+.return>h4 {
+    font-size: .32rem;
+    font-weight: bold;
+    color: #522400;
+    text-align: center;
+}

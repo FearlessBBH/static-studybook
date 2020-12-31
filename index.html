@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>学四史·看变迁</title>
+    <link rel="stylesheet" href="css/wap-base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/video-js.min.css">
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/video.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <video id="v1" poster="images/bg5.jpg" x5-video-player-type="h5" webkit-playsinline="true" playsinline="true" x5-video-orientation="h5" x-webkit-airplay="true" width="100%" height="100%">
+                <source src="video/video.mp4" type="video/mp4" />
+            </video>
+        <div class="open">
+            <img src="images/start.png" alt="">
+        </div>
+        <div class="push">跳过</div>
+        <div class="column menu">
+            <ul class="item">
+                <a href="list.html?name=1" style="margin-top: 46%;">
+                    <li></li>
+                </a>
+                <a href="list.html?name=2" style="margin-top: 10%;">
+                    <li></li>
+                </a>
+                <a href="list.html?name=3" style="margin-top: 12%;">
+                    <li></li>
+                </a>
+                <a href="list.html?name=4" style="margin-top: 12%;">
+                    <li></li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let max_W = document.body.clientWidth;
+            let max_H = document.body.clientHeight;
+
+            let v = document.querySelector('#v1');
+            let menu = document.querySelector('.menu');
+            let btn = document.querySelector('.open');
+            let push = document.querySelector('.push');
+
+            if (max_H == 2436) {
+                push.style.top = '16%';
+            }
+            var player = videojs('v1', {
+                controls: false,
+                preload: 'auto',
+                // width: max_W,
+                // height: max_H,
+                // controlBar: {
+                //     fullscreenToggle: false
+                // }
+            });
+
+            player.ready(function() {
+                console.log(this);
+                this.on('ended', function() {
+                    console.log('End');
+                    player.dispose();
+                })
+            })
+
+            btn.addEventListener('click', function() {
+                this.style.display = 'none';
+                player.play();
+                setTimeout(function() {
+                    push.style.display = 'block';
+                }, 5000);
+                // setTimeout(function() {
+                //     push.style.display = 'none';
+                // }, 34000);
+            });
+            console.log(v)
+
+            $('#v1').on('waiting', function() {
+                alert('Waiting');
+            });
+            $('#v1').on('end', function() {
+                alert('Ended');
+            })
+
+            push.addEventListener('click', function() {
+                this.style.display = 'none';
+                player.dispose();
+            });
+
+        }
+    </script>
+</body>
+
+</html>
